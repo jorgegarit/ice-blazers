@@ -1,0 +1,49 @@
+/*--------general styles*/
+:root
+{
+    --dark: black;
+}
+
+/*--------body styles*/
+body
+{
+    background-color: antiquewhite;
+}
+
+h1
+{
+    font-size: 70px;
+    line-height: 0px;
+}
+
+h2
+{
+    font-family: "Pacifico";
+    text-align: center;
+}
+
+
+/*--------header styles*/
+header .row
+{
+    align-items: center;
+}
+
+header div
+{
+    padding: 0px 10px;
+    border: none;
+}
+
+header .slogan
+{
+    background-color: brown;
+    color: white;
+    padding-top: 5px;
+    margin-right: 15px;
+}
+
+header .btn
+{
+    margin: 5px 0px;
+}

@@ -6,33 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Work+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--css stylesheet-->
+    <link rel="stylesheet" href="../../public/stylesheets/style.css">
     <title>JOURNIFY</title>
 </head>
 
 <body>
     <header>
-        <div>
-            <h1>JOURNIFY</h1>
-            <h3>A JOURNAL FOR EVERY JOURNEY.</h3>
-        </div>
-        <div>
-            <!--{{#if loggedIN}}
-            <button>Sign Out</button>
-            {{else}}-->
-            <button>Log In</button>
-            <button>Sign Up</button>
-            <!--{{/if}}-->
+        <div class="row">
+            <div class="col-9">
+                <div class="row">
+                    <img src="../../public/assets/images/placeholder-image.jpg" style="height:50px; width:55px" alt="">
+                    <h1>JOURNIFY</h1>
+                </div>
+                <div class="row slogan">
+                    <h3>A JOURNAL FOR EVERY JOURNEY</h3>
+                </div>
+            </div>
+            <nav class="col-3">
+                <!--{{#if loggedIN}}
+                <button class="btn btn-info col">Sign Out</button>
+                {{else}}-->
+                <div>
+                    <button class="btn btn-info col">Log In</button>
+                    <button class="btn btn-info col">Sign Up</button>
+                </div>
+                <!--{{/if}}-->
+            </nav>
         </div>
     </header>
 
-    <main>
-        <!--{{#if loggedIN}}
-        {{else}}-->
-        <div>Example that will say: log in or sign up to create a new journal!</div>
-        <!--{{/if}}-->
+    <main class="container-fluid">
+        <div class="row">
+            <!--{{{body}}}-->
+            <!--{{#if loggedIN}}-->
+            <article>
+                <div class="card bg-light mb-3" style="width: 18rem;">
+                    <img class="card-img-top" src="../../public/assets/images/placeholder-image.jpg" alt="">
+                    <div class="card-body">
+                        <h2 class="card-title">A new journey...</h2>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="card bg-light mb-3" style="width: 18rem;">
+                    <img class="card-img-top" src="../../public/assets/images/placeholder-image.jpg" alt="">
+                    <div class="card-body">
+                        <h2 class="card-title">My Example Journal</h2>
+                    </div>
+                </div>
+            </article>
+            <!--{{else}}-->
+            <article>
+                <div class="card bg-light mb-3" style="width: 18rem;">
+                    <img class="card-img-top" src="../../public/assets/images/placeholder-image.jpg" alt="">
+                    <div class="card-body">
+                        <h2 class="card-title">Log in or sign up to create a journal!</h2>
+                    </div>
+                </div>
+            </article>
+            <!--{{/if}}-->
+        </div>
     </main>
 
-    <footer>
+    <footer class="container-fluid">
         <h3>JOURNIFY &copy; 2022</h3>
         <p>
             Team Lead: Jorge Garit<br/>

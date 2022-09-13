@@ -18,10 +18,10 @@
         <div class="row">
             <div class="col-9">
                 <div class="row">
-                    <img src="../../public/assets/images/placeholder-image.jpg" style="height:50px; width:55px" alt="">
+                    <img class="logo" src="../../public/assets/images/placeholder-image.jpg" alt="">
                     <h1>JOURNIFY</h1>
                 </div>
-                <div class="row slogan">
+                <div class="row slogan-bg">
                     <h3>A JOURNAL FOR EVERY JOURNEY</h3>
                 </div>
             </div>
@@ -39,20 +39,20 @@
     </header>
 
     <main class="container-fluid">
-        <div class="row">
+        <div class="row auto">
             <!--{{{body}}}-->
             <!--{{#if loggedIN}}-->
             <article>
-                <div class="card bg-light mb-3" style="width: 18rem;">
-                    <img class="card-img-top" src="../../public/assets/images/placeholder-image.jpg" alt="">
+                <div class="journal card bg-light" style="width: 18rem;">
+                    <img class="card-img-top img-preview" src="../../public/assets/images/placeholder-image.jpg" alt="">
                     <div class="card-body">
                         <h2 class="card-title">A new journey...</h2>
                     </div>
                 </div>
             </article>
             <article>
-                <div class="card bg-light mb-3" style="width: 18rem;">
-                    <img class="card-img-top" src="../../public/assets/images/placeholder-image.jpg" alt="">
+                <div class="journal card bg-light" style="width: 18rem;">
+                    <img class="card-img-top img-preview" src="../../public/assets/images/placeholder-image.jpg" alt="">
                     <div class="card-body">
                         <h2 class="card-title">My Example Journal</h2>
                     </div>
@@ -60,10 +60,11 @@
             </article>
             <!--{{else}}-->
             <article>
-                <div class="card bg-light mb-3" style="width: 18rem;">
-                    <img class="card-img-top" src="../../public/assets/images/placeholder-image.jpg" alt="">
+                <div class="journal card bg-light" style="width: 18rem;">
+                    <img class="card-img-top img-preview" src="../../public/assets/images/placeholder-image.jpg" alt="">
                     <div class="card-body">
                         <h2 class="card-title">Log in or sign up to create a journal!</h2>
+                        <!--can fit 24 'm' characters but we could reasonably cap the title at 35 characters-->
                     </div>
                 </div>
             </article>
@@ -71,13 +72,15 @@
         </div>
     </main>
 
-    <footer class="container-fluid">
-        <h3>JOURNIFY &copy; 2022</h3>
-        <p>
-            Team Lead: Jorge Garit<br/>
-            Front-End Design: Victoria David<br/>
-            Back-End Development: Lindsay Libhart and Michael Jordan
-        </p>
+    <footer>
+        <div class="row">
+            <p class="col-8">
+                Team Lead: Jorge Garit<br/>
+                Front-End Design: Victoria David<br/>
+                Back-End Development: Lindsay Libhart and Michael Jordan
+            </p>
+            <h3 class="col-4">JOURNIFY &copy; 2022</h3>
+        </div>
     </footer>
 </body>
 

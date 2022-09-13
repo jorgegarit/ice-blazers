@@ -1,4 +1,10 @@
 /*--------general styles*/
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
 :root
 {
     --dark: black;
@@ -28,11 +34,12 @@ header h1
 header .row
 {
     align-items: center;
+    margin: 0px 0px 0px -10px;
 }
 
 header div
 {
-    padding: 0px 10px;
+
     border: none;
 }
 
@@ -69,7 +76,7 @@ header h3
 
 header .btn
 {
-    margin: 5px 0px;
+    margin: 5px;
     font-family: "Pacifico";
     width: 150px;
 }
@@ -86,6 +93,11 @@ main
     background-color: antiquewhite;
 }
 
+.card
+{
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.2)
+}
+
 .journal
 {
     background-color: white;
@@ -97,14 +109,44 @@ main
 {
     height: 250px;
     width: 250px;
-    margin: 5px 10px;
+    margin: 5px 8px;
     border: solid 2px grey;
+}
+
+.card:before
+{
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-width: 0 32px 32px 0;
+    border-style: solid;
+    border-color: transparent rgba(0,0,0) transparent rgba(255,255,255,0.5);
+}
+  
+.card:after
+{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+    border-width: 0 32px 32px 0;
+    border-style: solid;
+    border-color: rgba(0,0,0) transparent rgba(0,0,0) transparent;
 }
 
 .journal div
 {
     height: 128px;
-    padding: 10px;
+    padding: 7px;
+}
+
+/*--------view journal styles*/
+
+.journal-title
+{
+    font-family: "Pacifico";
+    font-size: 48px;
 }
 
 /*--------footer styles*/
@@ -117,13 +159,15 @@ footer
 footer .row
 {
     align-items: center;
-    padding: 15px 0px 0px 20px;
+    padding: 10px 0px;
 }
 
 footer h3
 {
     color: white;
     font-weight: 700;
+    text-align: right;
+    padding-right: 10px;
 }
 
 footer p

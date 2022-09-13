@@ -1,6 +1,28 @@
 <!--{{#if loggedIN}}-->
-<div>Examples of journals here!</div>
-<div>Create new journal!</div>
+<article> <!--each article should be a link to its own page-->
+    <div class="journal card bg-light" style="width: 18rem;">
+        <img class="card-img-top img-preview" src="../../public/assets/images/placeholder-image.jpg" alt="">
+        <div class="card-body">
+            <h2 class="card-title">A new journey...</h2>
+        </div>
+    </div>
+</article>
+<article>
+    <div class="journal card bg-light" style="width: 18rem;">
+        <img class="card-img-top img-preview" src="../../public/assets/images/placeholder-image.jpg" alt="">
+        <div class="card-body">
+            <h2 class="card-title">My Example Journal</h2>
+        </div>
+    </div>
+</article>
 <!--{{else}}-->
-<div>Non-hotlinked example that will say: log in or sign up to create a new journal!</div>
+<article>
+    <div class="journal card bg-light" style="width: 18rem;">
+        <img class="card-img-top img-preview" src="../../public/assets/images/placeholder-image.jpg" alt="">
+        <div class="card-body">
+            <h2 class="card-title">Log in or sign up to create a journal!</h2>
+            <!--can fit 24 'm' characters but we could reasonably cap the title at 35 characters-->
+        </div>
+    </div>
+</article>
 <!--{{/if}}-->

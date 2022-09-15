@@ -26,12 +26,9 @@
                 </div>
             </div>
             <nav class="col-3">
-                <!--{{#if loggedIN}}
-                <button class="btn btn-info col">Sign Out</button>
-                {{else}}-->
+                <!--{{#if loggedIN}}-->
                 <div>
-                    <button class="btn btn-info col">Log In</button>
-                    <button class="btn btn-info col">Sign Up</button>
+                    <button class="btn btn-info col">Sign Out</button>
                 </div>
                 <!--{{/if}}-->
             </nav>
@@ -41,8 +38,37 @@
     <main class="container-fluid">
         <div class="row auto">
             <!--{{{body}}}-->
-            <div class="row">
+            <div>
                 <h2 class="journal-title">My Example Journal</h2>
+            </div>
+            <div>
+                <p class="journal-desc">
+                    This is an example paragraph. I need to get this long enough to wrap.
+                    The content of this paragraph will be dictated by user input from the create journal
+                    screen. The colors will be determined after backgrounds are created.
+                </p>
+            </div>
+            <!--images will be added based on user input, formatted below-->
+            <div class="single-img card bg-light">
+                <img class="card-img-top img-preview" src="../../public/assets/images/placeholder-image.jpg" alt="">
+            </div>
+            <!--add button is a permanent feature at the end of the images-->
+            <div class="col row">
+                <button class="btn add-btn btn-info">Add Photo</button>
+                <button class="btn add-btn btn-info">Share</button>
+            </div>
+            <form class="form-group col-12">
+                <div>
+                    <label for="commenting"></label>
+                    <textarea class="form-control" id="commenting" placeholder="Add a comment." rows="3"></textarea>
+                </div>
+                <button class="btn btn-info col">Submit</button>
+            </form>
+            <div class="journal-comment col-12">
+                <p>
+                    This is an example comment!<br />
+                    <span>09/13/2022 by Name Here</span>
+                </p>
             </div>
         </div>
     </main>

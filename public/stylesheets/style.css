@@ -185,6 +185,38 @@ main
     font-style: italic;
 }
 
+/*--------login page styles*/
+.log-in
+{
+    min-width: 450px;
+    align-items: center;
+}
+
+.log-in h2
+{
+    font-family: "Pacifico";
+}
+
+.log-in input
+{
+    margin-bottom: 5px;
+}
+
+.center
+{
+    text-align: center;
+}
+
+.center h2
+{
+    font-size: 48px;
+}
+
+.center p
+{
+    font-size: 20px;
+}
+
 /*--------footer styles*/
 footer
 {

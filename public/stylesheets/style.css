@@ -217,6 +217,46 @@ main
     font-size: 20px;
 }
 
+/*--------create journal styles*/
+.quote
+{
+    text-align: right;
+    color: #17a2b8;
+    margin: 20px 0px;
+    border-left: 4px dashed #17a2b8;
+}
+
+.quote h2
+{
+    font-size: 85px;
+}
+
+.quote h3
+{
+    font-family: "Pacifico";
+    font-size: 50px;
+}
+
+.new-journal
+{
+    min-width: 290px;
+}
+
+.new-journal label
+{
+    padding: 5px 0px;
+}
+
+.new-journal textarea
+{
+    margin-bottom: 10px;
+}
+
+.new-journal button
+{
+    margin: 5px 0px;
+}
+
 /*--------footer styles*/
 footer
 {
@@ -238,8 +278,21 @@ footer h3
     padding-right: 10px;
 }
 
-footer p
+footer p, footer a
 {
     color: white;
     line-height: 1rem;
+}
+
+footer a:hover
+{
+    color: antiquewhite;
+}
+
+@media screen and (max-width: 796px)
+{
+    .quote
+    {
+        display: none;
+    }
 }

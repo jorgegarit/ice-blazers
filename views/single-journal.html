@@ -13,10 +13,24 @@
 <div class="single-img card bg-light">
     <img class="card-img-top img-preview" src="../../public/assets/images/placeholder-image.jpg" alt="">
 </div>
-<!--buttons are a permanent feature at the end of the images-->
+<!--buttons are a permanent feature at the end of the images, but should only be visible to the creator of the journal-->
 <div class="col row">
-    <button class="btn add-btn btn-info">Add Photo</button>
-    <button class="btn add-btn btn-info">Share</button>
+    <div class="dropdown">
+        <button class="btn add-btn btn-info dropdown-toggle" id="add-photo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Add Photo
+        </button>
+        <div class="dropdown-menu" aria-labelledby="add-photo">
+            <input type="file" class="form-control-file new-journal dropdown-item" id="photo">
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="btn add-btn btn-info dropdown-toggle" id="share" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Share
+        </button>
+        <div class="dropdown-menu" aria-labelledby="share">
+            <input type="text" class="form-control-file new-journal dropdown-item" id="link" placeholder="Shareable Link Here">
+        </div>
+    </div>
 </div>
 <!--form for comments, name will be added from signup page, date function needed in dd/mm/yyyy-->
 <form class="form-group col-12">

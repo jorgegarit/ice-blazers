@@ -51,14 +51,15 @@ User.init(
     //   allowNull: false,
     //   set(val) {
     //     if (val === this.password) {
-    //       this.setDataValue('confirm', password)
+    //       const hashPass = newUserData.password;
+    //       this.setDataValue('confirm', hashPass);
     //     }
-      // },
-      // validate: {
-      //   notNull: {
-      //     msg: 'Passwords need to match'
-      //   }
-      // }
+    //   },
+    //   validate: {
+    //     notNull: {
+    //       msg: 'Passwords need to match'
+    //     }
+    //   }
     // }
     },
     {

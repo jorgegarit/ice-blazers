@@ -18,16 +18,12 @@ Journal.init
             type: DataTypes.STRING,
             allowNull: false
         },
-        journal_title:
+        entry:
         {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        journal_desc:
-        {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        //photos here!
         user_id:
         {
             type: DataTypes.INTEGER,

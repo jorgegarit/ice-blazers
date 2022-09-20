@@ -51,23 +51,53 @@ router.post('/', (req, res) =>
     });
 });
 
+router.post('/login', (req, res) =>
+{
+    User.findOne
+    ({
+        where: {email: req.body.email}
+    })
+    .then(dbUserData =>
+    {
+        if (!dbUserData)
+        {
+            res.status(400).json({message: `No user found with that email.`});
+            return;
+        }
+        //res.json({user: dbUserData});
+        //verify
+
+        const validPW = dbUserData.checkPassword(req.body.password);
+        if (!validPW)
+        {
+            res.status(400).json({message: `Incorrect password.`});
+            return;
+        }
+        res.json({user: dbUserData, message: `Welcome to Journify!`});
+    });
+});
+
 router.put('/:id', (req, res) =>
 {
-    User.update(req.body, {where: {id: req.params.id}})
-        .then(dbUserData =>
+    User.update(req.body,
+    {
+        individualHooks: true,
+        where: {id: req.params.id}
+    })
+    .then(dbUserData =>
+    {
+        if (!dbUserData[0])
         {
-            if (!dbUserData[0])
-            {
-                res.status(404).json({message: `No user exists with the given parameters.`});
-                return;
-            }
-            res.json(dbUserData);
-        })
-        .catch(err =>
-        {
-            console.log(err);
-            res.status(500).json(err);
-        });
+            res.status(404).json({message: `No user exists with the given parameters.`});
+            return;
+        }
+        res.json(dbUserData);
+    })
+    .catch(err =>
+    {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 router.delete('/:id', (req, res) =>

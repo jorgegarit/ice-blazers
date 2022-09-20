@@ -11,10 +11,10 @@
   "name": "project2",
   "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "./libjg/login.js",
   "scripts": {
     "test": "jest",
-    "start": "node server.js"
+    "start": "node ./libjg/login.js"
   },
   "repository": {
     "type": "git",

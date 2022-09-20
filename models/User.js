@@ -1,6 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// calling bcrypt to encrypt password
+const bcrypt = require('bcrypt');
+
 
 // creating the user model 
 class User extends Model { 
@@ -59,6 +62,14 @@ User.init(
     // }
     },
     {
+      // Adding hooks to create hashed password
+      hooks: {
+        // using befor create hook to the hash password gets created before the new user is added
+        async beforeCreate(newUserData) {
+          newUserData.password = await bcrypt.hash(newUserData.password, 10);
+          return newUserData;
+        }
+      },
       //Table Configurations
       //this passes our connection to the database
       sequelize,

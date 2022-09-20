@@ -296,3 +296,32 @@ footer a:hover
         display: none;
     }
 }
+
+@media screen and (max-width: 750px)
+{
+    .slogan-bg
+    {
+        display: none;
+    }
+
+    .logo
+    {
+        display: none;
+    }
+
+    header
+    {
+        padding-bottom: 4px;
+        border-bottom: 4px dashed #17a2b8;
+    }
+
+    header h1
+    {
+        font-size: 85px;
+    }
+
+    header button
+    {
+        width: fit-content;
+    }
+}

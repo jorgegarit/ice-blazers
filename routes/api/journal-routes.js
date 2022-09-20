@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {User, Journal} = require('../../models');
+const {User, Journal, Comment} = require('../../models');
 
 router.get('/', (req, res) =>
 {
@@ -9,10 +9,21 @@ router.get('/', (req, res) =>
         attributes: ['id', 'user_id', 'title', 'entry'/*, example photo*/, 'updated_at'/*to organize journals by last updated*/],
         order: [['updated_at', 'DESC']],
         include:
-        [{
-            model: User,
-            attributes: ['username'] //in case??
-        }]
+        [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include:
+                {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username'] //in case??
+            }
+        ]
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err =>
@@ -29,10 +40,21 @@ router.get('/:id', (req, res) =>
         where: {id: req.params.id},
         attributes: ['id', 'title', 'entry', 'created_at'],
         include:
-        [{
-            model: User,
-            attributes: ['username']
-        }]
+        [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                include:
+                {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username'] //in case??
+            }
+        ]
     })
     .then(dbPostData =>
     {

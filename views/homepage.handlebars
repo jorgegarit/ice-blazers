@@ -1,4 +1,4 @@
-<article>
+<article href="CREATE JOURNAL PAGE">
     <div class="journal card bg-light" style="width: 18rem;">
         <img class="card-img-top img-preview" src="/assets/images/placeholder-image.jpg" alt="">
         <div class="card-body">
@@ -6,12 +6,14 @@
         </div>
     </div>
 </article>
-<!--each journal should be a link to its own single-journal page-->
-<article>
+
+{{#each journals}}
+<article href="/{{id}}">
     <div class="journal card bg-light" style="width: 18rem;">
         <img class="card-img-top img-preview" src="/assets/images/placeholder-image.jpg" alt="">
         <div class="card-body">
-            <h2 class="card-title">My Example Journal</h2>
+            <h2 class="card-title">{{title}}</h2>
         </div>
     </div>
 </article>
+{{/each}}

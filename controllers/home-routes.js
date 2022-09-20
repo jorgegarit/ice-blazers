@@ -1,8 +1,33 @@
 const router = require('express').Router();
+const sequelize = require('sequelize');
+const {User, Journal, Comment} = require('../models');
+
 
 router.get('/', (req, res) =>
 {
-    res.render('homepage');
+    Journal.findAll
+    ({
+        attributes: ['id', 'title', 'updated_at'],
+        include:
+        [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbPostData =>
+    {
+        const journals = dbPostData.map(journal => journal.get({plain: true}));
+        res.render('homepage', {journals});
+    })
+    .catch(err =>
+    {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
+
+router.get('/')
 
 module.exports = router;

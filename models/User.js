@@ -7,7 +7,10 @@ const bcrypt = require('bcrypt');
 
 // creating the user model 
 class User extends Model { 
-    // will fill with information later during hatching
+    // will check password 
+    passwordCheck(loginPassword) {
+      return bcrypt.compareSync(loginPassword, this.password);
+    }
 }
 
 // this section will help define the table columns 

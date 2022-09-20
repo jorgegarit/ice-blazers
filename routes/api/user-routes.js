@@ -48,8 +48,26 @@ router.post('/', (req, res) => {
 
 // authenticate user 
 router.post('/login', (req, res) => {
-  
-})
+  // will use email to authenticate
+  User.findOne({
+    where: {
+      email: req.body.email
+    }
+  }).then(dbUserData => {
+    if (!dbUserData) {
+      res.status(400).json({ message: 'No account found with that email' });
+      return;
+    }
+
+    const validatePassword = dbUserData.passwordCheck(req.body.password);
+    if (!validatePassword) {
+      res.status(400).json({ message: 'Password is incorrect' });
+      return;
+    }
+
+    res.json({ user: dbUserData, message: 'You have logged in' });
+  });
+});
 
 // exporting requests
 module.exports = router;

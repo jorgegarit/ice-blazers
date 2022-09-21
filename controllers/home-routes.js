@@ -28,6 +28,14 @@ router.get('/', (req, res) =>
     });
 });
 
-router.get('/')
+router.get('/login', (req, res) =>
+{
+    if (req.session.loggedIN)
+    {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
 
 module.exports = router;

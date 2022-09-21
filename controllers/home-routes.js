@@ -48,7 +48,7 @@ router.get('/journals/:id', (req, res) =>
         [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'user_id', 'created_at'],
+                attributes: ['id', 'comment_text', 'user_id', 'journal_id', 'created_at'],
                 include:
                 {
                     model: User,
@@ -70,6 +70,7 @@ router.get('/journals/:id', (req, res) =>
         }
 
         const journal = dbPostData.get({plain: true});
+        console.log(journal);
         res.render('single-journal', {journal});
     })
     .catch(err =>

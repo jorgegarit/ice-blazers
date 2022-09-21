@@ -6,4 +6,4 @@ VALUES
 INSERT INTO journal (title, entry, user_id, created_at, updated_at)
 VALUES
 ("example", "example", 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
-("test", "test", 2, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+("test", "test", 1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

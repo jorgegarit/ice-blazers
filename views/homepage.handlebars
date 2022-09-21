@@ -8,12 +8,14 @@
 </article>
 
 {{#each journals}}
-<article href="/{{id}}">
+<article>
+    <a href="/journals/{{id}}">
     <div class="journal card bg-light" style="width: 18rem;">
         <img class="card-img-top img-preview" src="/assets/images/placeholder-image.jpg" alt="">
         <div class="card-body">
             <h2 class="card-title">{{title}}</h2>
         </div>
     </div>
+    </a>
 </article>
 {{/each}}

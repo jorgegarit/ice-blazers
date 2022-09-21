@@ -5,6 +5,8 @@ const session = require('express-session');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+
+
 const cookies = {
   secret: 'Super secret',
   cookie: {},
@@ -15,10 +17,12 @@ const cookies = {
   })
 };
 
-app.use(session(cookies));
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+app.use(session(cookies));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

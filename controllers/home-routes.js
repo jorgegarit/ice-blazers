@@ -7,6 +7,7 @@ router.get('/', (req, res) =>
 {
     Journal.findAll
     ({
+        where: {user_id: req.session.user_id},
         attributes: ['id', 'title', 'updated_at'],
         include:
         [
@@ -42,7 +43,7 @@ router.get('/journals/:id', (req, res) =>
 {
     Journal.findOne
     ({
-        where: {id: req.params.id},
+        where: {user_id: req.session.user_id, id: req.params.id},
         attributes: ['id', 'title', 'entry', 'updated_at'],
         include:
         [
@@ -65,12 +66,11 @@ router.get('/journals/:id', (req, res) =>
     {
         if(!dbPostData)
         {
-            res.status(404).json({message: `No post exists under this ID.`});
+            res.status(404).json({message: `No journal exists under this ID.`});
             return;
         }
 
         const journal = dbPostData.get({plain: true});
-        console.log(journal);
         res.render('single-journal', {journal});
     })
     .catch(err =>

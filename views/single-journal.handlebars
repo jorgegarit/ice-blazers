@@ -30,15 +30,15 @@
         </div>
     </div>
 </div>
-<!--form for comments, name will be added from signup page, date function needed in dd/mm/yyyy-->
-<form class="form-group col-12">
+
+<form class="form-group col-12" id="comment-form">
     <div>
         <label for="commenting"></label>
-        <textarea class="form-control" id="commenting" placeholder="Add a comment." rows="3"></textarea>
+        <textarea class="form-control" name="comment-text" id="commenting" placeholder="Add a comment." rows="3"></textarea>
     </div>
     <button type="submit" class="btn btn-info col">Submit</button>
 </form>
-<!--example for comment formatting-->
+
 <div class="journal-comment col-12">
 {{#each journal.comments}}
     <p>
@@ -47,3 +47,5 @@
     </p>
 {{/each}}
 </div>
+
+<script src="/javascript/comment.js"></script>

@@ -5,18 +5,19 @@
 
 ## Table of Contents:
 * [General Information](#general)
-* [Installation Instructions](#installation)
+* [Deployed Website](#website)
 * [Technologies](#technologies)
 * [Credits](#credits)
-* [Screenshots or Video Files](#screenshots)
+* [Screenshots](#screenshots)
 * [License](#license)
+* [Footer](#footer)
 
 ### General Information:
 This application is a photo journaling application. A user will have the ability to upload groups of photos to designated files in order to journal important moments in their lives.The user will also be able to tag locations to their photo albums. The user will be given a specific id that they can share with family and friends for them to view. The user and their friends/families can also interact with each other's journals posting comments, likes, etc. 
 
 
-### Installation Instructions:
-Please visit the following Heroku link to open the application: https://ice-blazers-journify.herokuapp.com/
+### Deployed Website:
+Please visit the following Heroku link to open the application: 
 
 ### Technologies:
 JavaScript, Express NodeJS, NPM packages: express, dotenv, mysql2, multer and cors, HTML and CSS.
@@ -25,16 +26,20 @@ JavaScript, Express NodeJS, NPM packages: express, dotenv, mysql2, multer and co
 * Multer middleware: https://expressjs.com/en/resources/middleware/multer.html
 * Cors middleware: https://expressjs.com/en/resources/middleware/cors.html
 
-### Screenshots or Video Files:
+### Screenshots 
 
-* Youtube video of the demonstration of the Work Team Profile Generator:
+#### Login Page
+![Login](./public/assets/images/login_page.jpg)
 
-[![Youtube video of Readme.md Generator](/assets/coverimageyoutubinsert.jpg)](https://youtubeLINK)
+#### Home Page
+![Home](./public/assets/images/home_page.jpg)
 
-* Play by play screenshots of the command line prompts for the readme questions and the creation of the readme.md:
+#### My Journal Page
+![Journal](./public/assets/images/myjournal_page.jpg)
 
-![Screenshot](/assets/insertimage1.jpg),
-![Screenshot](/assets/insertimage2.jpg).
+#### Create Journal Page
+![Create](./public/assets/images/createjournal_page.jpg)
+
 
 ### License
 This project is licensed under:
@@ -48,7 +53,7 @@ rebeldraconis@gmail.com
 GitHub Repository: https://github.com/xunvyre
 
 Jorge Garit (Lead)
-insert email here
+jorgegarit@gmail.com
 GitHub Repository: https://github.com/jorgegarit
 
 Michael Jordan

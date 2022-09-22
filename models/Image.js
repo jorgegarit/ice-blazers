@@ -1,9 +1,9 @@
 const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Journal extends Model {}
+class Image extends Model{}
 
-Journal.init
+Image.init
 (
     {
         id:
@@ -13,15 +13,17 @@ Journal.init
             primaryKey: true,
             autoIncrement: true
         },
-        title:
+        type:
         {
-            type: DataTypes.STRING,
-            allowNull: false
+            type: DataTypes.STRING
         },
-        entry:
+        name:
         {
             type: DataTypes.STRING,
-            allowNull: false,
+        },
+        data:
+        {
+            type: DataTypes.BLOB("long")
         },
         user_id:
         {
@@ -31,14 +33,23 @@ Journal.init
                 model: 'user',
                 key: 'id'
             }
+        },
+        journal_id:
+        {
+            type: DataTypes.INTEGER,
+            references:
+            {
+                model: 'journal',
+                key: 'id'
+            }
         }
     },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'journal'
+        modelName: 'image'
     }
 );
 
-module.exports = Journal;
+module.exports = Image;

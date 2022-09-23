@@ -17,7 +17,7 @@ This application is a photo journaling application. A user will have the ability
 
 
 ### Deployed Website:
-Please visit the following Heroku link to open the application: 
+Please visit the following Heroku link to open the application: https://salty-forest-28898.herokuapp.com/login
 
 ### Technologies:
 JavaScript, Express NodeJS, NPM packages: express, dotenv, mysql2, multer and cors, HTML and CSS.
